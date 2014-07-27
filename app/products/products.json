@@ -1,0 +1,36 @@
+[
+
+    {
+        "price": 229.00, 
+        "id": 1, 
+        "image_url": "img/alchemist.jpeg", 
+        "name": "The Alchemist", 
+        "author": "Paulo Coelho",
+        "description": "A novel rich in metaphors and symbolism, The Alchemist is a story based on the adventures of a young shepherd boy, who, upon deciding to follow his prophetic dreams, sets on a treasure hunt. This journey introduces him to some remarkable people who leave an indelible and profound mark on him."
+    }, 
+    {
+        "price": 260.00, 
+        "id": 2, 
+        "image_url": "img/messi.jpeg", 
+        "name": "Messi(ENGLISH)", 
+        "author": "Luca Caioli",
+        "description": "Lionel Andres Messi is a name to inspire and awe people. In this book, Caioli Luca draws on official interviews, testimonies from parents, family, friends, coaches, team-mates, opponents and Messi himself to spin the tale of the man who was known as the Machine of '87 for his skill at the game."
+    }, 
+    {
+        "price": 199.00, 
+        "id": 3, 
+        "image_url": "img/unix.jpeg", 
+        "name": "The UNIX Programming Environment", 
+        "author": "Brian W. Kernighan",
+        "description": "The reasons for the success of the UNIX system are several. It is written in 'C' which is versatile and effective featuring economy of expression, modern control flow and data structures. "
+    },
+    {
+        "price": 350.00, 
+        "id": 4, 
+        "image_url": "img/sherlock.jpeg", 
+        "name": "The Complete Sherlock Holmes", 
+        "author": "Arthur Conan Doyle",
+        "description": "All 4 Novels And 56 Short Stories consists of all the stories featuring the infamous Sherlock Holmes and his sidekick Dr. Watson."
+    }
+
+]

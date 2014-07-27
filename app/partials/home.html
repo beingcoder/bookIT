@@ -1,0 +1,52 @@
+<div class="row" >
+   <a href="#/cart"><div align="right">
+    {{ apiroot }}
+  <img src="img/shopping2.png">
+  My Cart
+    </a>
+</div>
+
+   
+  
+</div>
+
+<div class="row">
+  <div class="large-8 columns">
+      <input type="text" placeholder="Search items" ng-model="query"/>
+  </div>
+  <div class="large-1 columns">
+    <label  class="left inline">Sort :</label>
+  </div>
+  <div class="large-3 columns">
+    <select ng-model="orderProp">
+      <option value="name">Name</option>
+      <option value="price">Price</option>
+    </select>      
+  </div>
+  </div>
+<div class="row">
+  <div class="large-12 columns large-centered">
+    <table style="width:100%;">
+      <tr>
+        <th>ID</th>
+         <th>Cover</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Description</th>
+       
+      </tr>
+      <tr ng-repeat="product in products | filter:query | orderBy:orderProp">
+        <td><a href="#/products/{{product.id}}">{{product.id}}</a></td>
+                <td><a href="#/products/{{product.id}}"><img src="{{product.image_url}}" alt="" class="src"></a></td>
+        <td><a href="#/products/{{product.id}}">{{product.name}}</a></td>
+            <td><a href="#/products/{{product.id}}">{{product.author}}</a></td>
+        <td><a href="#/products/{{product.id}}">{{product.price}}</a></td>
+        <td><a href="#/products/{{product.id}}">{{product.description}}</a></td>
+
+      </tr>
+      <tr>
+      
+    </table>
+  </div>
+</div>

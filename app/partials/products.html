@@ -1,0 +1,95 @@
+  <div class="row" ng-if="quantity" class="ng-hide">
+    <a href="#/cart"><div align="right">
+  <img src="img/shopping2.png">
+  My Cart
+    </a>
+  </div>
+<div class="row">
+  <div class="large-10 columns large-centered">
+    <div class="row">
+      <h3>{{product.name}}</h3>
+    </div>
+    <div class="row" id="status"><div class="alert-box success">{{status_msg}}</div></div>
+    <div class="row">
+      <div class="large-8 columns">
+        <h4>Description</h4>
+        <span class="id">{{product.id}}</span>
+        <br />
+        <span class="author">{{product.author}}</span>
+        <hr>
+        <p>{{product.description}}</p>
+      </div>
+      <div class="large-4 columns">
+        <div class="row">
+          <img src="{{product.image_url}}" alt="">
+        </div>
+        <div class="row">
+          <h4>Price:</h4>
+
+        </div>
+        <div class="row">
+          <div class="large-2 columns">
+            <span class="price" ng-model="price">{{product.price}}</span>  
+          </div>  
+          <div class="large-5 columns">
+            <select name="quantity_in_cart" id="quantity" ng-model="tempQuantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <a href="" class="button expand" ng-click="addToCart(tempQuantity)">Add to Cart</a>
+        </div>
+        <div class="row">
+          <h4>Total Price:</h4>
+          <span class="price">{{calculatePrice(tempQuantity,product.price)}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style type="text/css">
+  .price{
+    font-size: 36px;
+    color: brown;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .price:before{
+    content:"$";
+  }
+  .price:after{
+    content:".00";
+    font-size: 18px;
+    vertical-align: top;
+  }
+  .id{
+    font-size: 14px;
+    font-style: bold;
+    font-family: sans-serif;
+    color:grey;
+  }
+  .id:before{
+    content: "Product ID:";
+  }
+  .author{
+    font-size: 14px;
+    font-style: bold;
+    font-family: sans-serif;
+    color:grey;
+  }
+  .author:before{
+    content: "Author:";
+  }
+  #status{
+    display: none;
+  }
+</style>

@@ -1,0 +1,8 @@
+{
+        "price": 199.00, 
+        "id": 3, 
+        "image_url": "img/unix.jpeg", 
+        "name": "The UNIX Programming Environment", 
+        "author": "Brian W. Kernighan",
+        "description": "The reasons for the success of the UNIX system are several. It is written in 'C' which is versatile and effective featuring economy of expression, modern control flow and data structures. "
+    }

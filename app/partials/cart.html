@@ -1,0 +1,75 @@
+<div class="row" >
+  <a onClick=alert("Success"); href="">
+    <div align="right"><img src="img/checkout.png">Checkout now</div>
+  </a>
+</div>
+<div class="row">
+  <div class="large-8 columns">
+      <input type="text" placeholder="Search" ng-model="query"/>
+  </div>
+  <div class="large-1 columns">
+    <label  class="left inline">Sort by:</label>
+  </div>
+  <div class="large-3 columns">
+    <select ng-model="orderProp">
+      <option value="name">Name</option>
+      <option value="price">Price</option>
+    </select>      
+  </div>
+  </div>
+<div class="row">
+  <div class="large-12 columns large-centered">
+    <table style="width:100%;">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+        <th>Remove Item</th>
+      </tr>
+      <tr ng-repeat="product in cart | filter:query | orderBy:orderProp track by $index">
+        <td><a href="#/products/{{product.id}}">{{product.id}}</a></td>
+        <td><a href="#/products/{{product.id}}">{{product.name}}</a></td>
+        <td><a href="#/products/{{product.id}}">{{product.author}}</a></td>
+        <td><a href="#/products/{{product.id}}">{{product.description}}</a></td>
+        <td><a href="#/products/{{product.id}}"><img src="{{product.image_url}}" alt="" class="src"></a></td>
+        <td><a href="#/products/{{product.id}}">{{product.quantity}}</a></td>
+        <td><a href="#/products/{{product.id}}">{{product.price}}</a></td>
+        <td><a href="" ng-click="removeItemFromCart(product.name)">X</a></td>
+      </tr>
+      <tr >
+        <td rowspan="2">Total</td>
+        <td ><span class="price">{{calculateTotal()}}</span></td>
+
+      </tr>
+      <tr>
+      
+    </table>
+  </div>
+<!--   <div id="checkoutDialog" class="reveal-modal" data-reveal>
+
+      <h2>You are about to pay a total of .</h2><span class="price">{{calculateTotal()}}</span>
+      <p class="lead">Hope you enjoyed shopping</p>
+      <a href="" on-click="alert('This is the endpoint')"class="button round large-centered">Checkout</a>
+      <a class="close-reveal-modal">&#215;</a>
+      </div>
+  </div> -->
+<style>
+  .price{
+    font-size: 36px;
+    color: brown;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .price:before{
+    content:"$";
+  }
+  .price:after{
+    content:".00";
+    font-size: 18px;
+    vertical-align: top;
+  }
+</style>
